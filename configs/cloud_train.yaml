@@ -1,0 +1,25 @@
+# Cloud GPU training config for the Multi-Task AST classifier (16 GB+ VRAM: T4, A10G, RTX 3090, A100).
+#
+# Usage (from the repository root):
+#   python -m src.train --config configs/cloud_train.yaml --resume auto
+# Command-line flags override values in this file, e.g. --num_workers 2 or --batch_size 8 --grad_accum_steps 2.
+
+# Data
+train_manifest: data/manifests/train.csv
+val_manifest: data/manifests/val.csv
+test_manifest: data/manifests/test.csv
+batch_size: 16
+num_workers: 4
+
+# Optimization
+lr_backbone: 2e-5
+lr_heads: 5e-4
+weight_decay: 1e-4
+epochs: 20
+warmup_epochs: 2.0
+grad_accum_steps: 1
+mixed_precision: true          # float16 autocast + GradScaler on CUDA
+gradient_checkpointing: false  # faster training when VRAM allows
+
+# Output
+output_dir: "checkpoints/cloud_run"

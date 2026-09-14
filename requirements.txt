@@ -1,0 +1,12 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch>=2.4.0
+torchaudio>=2.4.0
+# Checkpoint weight names follow the transformers 5.x AST module layout: train and predict with the same major version.
+transformers>=5.17.0,<6
+soundfile>=0.12.1
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+tqdm>=4.65.0
+pyyaml>=6.0
+pytest>=7.0.0
