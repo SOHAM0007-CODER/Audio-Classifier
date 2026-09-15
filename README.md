@@ -1,6 +1,6 @@
 # Multi-Task Audio Spectrogram Transformer (AST) Classifier
 
-A multi-task audio classification pipeline leveraging the Audio Spectrogram Transformer (AST) for joint classification of music genres (GTZAN) and environmental sounds (ESC-50), optimized for consumer hardware (NVIDIA GeForce GTX 1650 4GB).
+A multi-task audio classification pipeline leveraging the Audio Spectrogram Transformer (AST) for joint classification of music genres (GTZAN) and environmental sounds (ESC-50), optimized for consumer hardware.
 
 ---
 
